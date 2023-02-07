@@ -24,3 +24,8 @@ Outline
 19. Shallow vs Deep Copying
 20. The Asterick (*) Operator
 21. Context Managers
+
+
+# Next steps
+logging tutorials
+https://docs.python.org/3/howto/logging.html#logging-basic-tutorial
