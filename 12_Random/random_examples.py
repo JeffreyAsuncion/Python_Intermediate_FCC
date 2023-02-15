@@ -46,3 +46,6 @@ print(a)
 mylist = list("ABCEFGHIJ")
 random.shuffle(mylist)
 print(mylist)
+
+
+### 3:05:50
