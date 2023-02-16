@@ -1,0 +1,27 @@
+GIL: Global interpreter lock
+- A lock that allows only one thread at a time to execute in Python
+
+- Needed in CPython because memory management is not thread-safe
+    PROBLEM:
+    in CPython, there is a technique that is called reference counting for memory management
+    a reference count variable that keeps track of the number of references that keep track
+    of the number of references that point to the object. when this count reaches zero,
+    the memory occupied by the object can be released. 
+    And the problem now, in multi threading is that this reference count variable needs 
+    protection from race conditions where two threads increase or decrease the value simultaneously
+    This could casue a leak, it can cause leaked memory that is never released. 
+    Or it can incorrectly release the memory while a reference to that object still exists.
+    This is the reason that they introduced the GIL
+
+    SOLUTION:
+    if you want to use parallel computing is to use multi processing
+    Or you can use a different free threaded Python implementation
+    and not CPython. So there's for example Jython and IronPython
+    Or you can use Python, Python as a wrapper for third party libraries.
+    You can use Python as a wrapper for third party libraries.
+    And this is the way it works in NumPy and scipy modules
+
+- Avoid:
+    - Using multiprocessing
+    - Use a different, free-threaded Python implementation (Jython, IronPython)
+    - Use Python as a wrapper for third-party libraries (C/C++) -> numpy, scipy
