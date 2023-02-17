@@ -1,0 +1,9 @@
+We learned that we can easily share data between
+threads with a global variable. 
+
+and  now with processes, processes don't live in the same memory space,
+so they don't have access to the same public data.
+
+And because of that they need special shared memory objects to 
+share data. and there are two shared memory objects that we can use, 
+we can use a value for a single value, or we can use an array.
