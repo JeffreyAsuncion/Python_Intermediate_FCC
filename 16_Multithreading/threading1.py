@@ -11,6 +11,7 @@ database_value = 0
 def increase(lock):
     global database_value
 
+    # with lock == context manager
     with lock:
         local_copy = database_value
         # simulate processing and processing time
